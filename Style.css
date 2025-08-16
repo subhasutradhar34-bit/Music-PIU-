@@ -1,0 +1,121 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+ background-color:#88b1ea;
+}
+
+body{
+  font-family:'Times New Roman', Times, serif;
+  background: rgb(234, 202, 220);
+  color: #c31717;
+  padding: 20px;
+  text-align: center;
+}
+
+h1,h {
+  font-size: 1.5cm;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+p {
+    font-size: 0.8cm;
+  color: black;
+  margin-bottom: 40px;
+}
+
+
+.container{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  background-color: #9763e4;
+  align-items: start;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Card holding image + button */
+.container > div{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 6px 20px rgba(1, 2, 6, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  transition: transform .22s ease, box-shadow .22s ease;
+  overflow: hidden;
+}
+
+/* Lift on hover */
+.container > div:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(4,10,30,0.7);
+}
+
+/* Images */
+.container img{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Buttons (shared styles) */
+.container button{
+  cursor: pointer;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.6px;
+  min-width: 64px;
+  transition: transform .14s ease, box-shadow .14s ease;
+  box-shadow: 0 6px 18px rgba(8,14,30,0.45);
+  user-select: none;
+}
+
+/* Individual button colors */
+button.one{
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  color: white;
+}
+
+button.Two{
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  color: white;
+}
+
+button.Three{
+  background: linear-gradient(90deg, #f97316, #ef4444);
+  color: white;
+}
+button.Four{
+  background: linear-gradient(90deg, #be1686, #e60a5b);
+  color: white;
+}
+button.Five{
+ background: linear-gradient(90deg, #240650, #a8e00e);
+  color: white;
+}
+/* Hover/active states */
+.container button:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(219, 13, 13, 0.6);
+}
+
+.container button:active{
+  transform: translateY(0);
+  box-shadow: 0 6px 12px red;
+  opacity: 0.98;
+}
